@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLoggedInStudent.cshtml";
+}
+
+<h1>Je kunt hier je beschikbaarheid aangeven</h1>
+
+
+@using (Html.BeginForm("SetSingleBeschikbaar", "Student", FormMethod.Post))
+{
+
+    <h4>Kies de datum</h4>
+    <input type="date" name="Date"/>
+
+    <h4>Kies de begin tijd</h4>
+    <input type="time" name="Begin"/>
+
+    <h4>Kies de eind tijd</h4>
+    <input type="time" name="Eind"/>
+
+    <button type ="submit">Geef aan</button>
+
+}

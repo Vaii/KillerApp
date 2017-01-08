@@ -1,0 +1,16 @@
+De database draait op de iris server van de fontys.
+
+Je moet verbonden zijn met de vdi.fhict.nl VPN.
+
+De database zou dan automatisch moeten connecten.
+Zo niet dan staan de inloggegevens bij de properties onder connectionstring.
+
+
+
+Mijn github:
+
+https://github.com/Vaii
+
+Er staan 2 Killer app repos.
+Die met de meeste commits heb ik grotendeels gebruikt. (KillerappSE2)
+De 2e is gemaakt om het overzichtelijk en netes te houden (killerapp)

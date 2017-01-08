@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model KillerAppSE2.ViewModel.RegisterViewModelStudent
+
+@using (Html.BeginForm("RegisterStudent", "Register", FormMethod.Post))
+{
+    <div class="form-container">
+        <form method="post">
+            <h2 class="text-center">Registreren Student.</h2>
+            <div class="form-group">
+                <input type="text" name="initialen" placeholder="Initialen" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Achternaam" placeholder="Achternaam" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="loginPin" placeholder="4 Cijferige login code" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="email" placeholder="Email" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="TelNr" placeholder="Telefoon Nummer" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="ThuisAdres" placeholder="Straatnaam" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="StudLocatie" placeholder="Studeer Locatie" class="form-control"/>
+            </div>
+
+            <div class="form-group"></div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">Registreer</button>
+            </div>
+        </form>
+    </div>
+}
+
