@@ -5,9 +5,14 @@ using System.Web;
 
 namespace KillerAppSE2.Models
 {
-    public class User
+    public abstract class User
     {
-        public string name;
-        public int age;
+        public string initialen { get; set; }
+        public string achternaam { get; set; }
+        public int loginPin { get; set; }
+        public string email { get; set; }
+        public string telNr { get; set; }
+        public string thuisAdres { get; set; }
+
     }
 }
