@@ -1,0 +1,15 @@
+﻿@using KillerAppSE2.Models
+@{
+    Layout = "~/Views/Shared/_LayoutLoggedInStudent.cshtml";
+}
+
+@{
+    List<Beschikbaarheid> beschikbaar = (List<Beschikbaarheid>) Model;
+}
+
+<div>
+        @foreach (Beschikbaarheid bs in beschikbaar)
+        {
+            <p>@bs.ToString();</p>
+        }
+</div>

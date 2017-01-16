@@ -121,6 +121,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
@@ -152,7 +153,7 @@
     <Compile Include="Connector\IConnector.cs" />
     <Compile Include="Connector\MSSQLConnector.cs" />
     <Compile Include="Context\Student\MemoryContextStudent.cs" />
-    <Compile Include="Context\Student\SQLContextUser.cs" />
+    <Compile Include="Context\Student\SQLContextStudent.cs" />
     <Compile Include="Context\User\SQLContextUser.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -194,6 +195,8 @@
     <Content Include="Views\Shared\_LayoutLoggedInOuder.cshtml" />
     <Content Include="Views\Ouder\OuderBase.cshtml" />
     <Content Include="Views\Student\Beschikbaarheid.cshtml" />
+    <Content Include="Views\Student\Planning.cshtml" />
+    <Content Include="Views\Ouder\Aanvraag.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -203,6 +206,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Context\Ouder\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

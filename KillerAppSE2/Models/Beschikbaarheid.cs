@@ -19,5 +19,17 @@ namespace KillerAppSE2.Models
             this.EindTime = EindTime;
             this.Datum = Datum;
         }
+
+        public Beschikbaarheid(string StartTime, string EindTime, DateTime Datum)
+        {
+            this.StartTime = StartTime;
+            this.EindTime = EindTime;
+            this.Datum = Datum;
+        }
+
+        public override string ToString()
+        {
+            return "Datum: " +  Datum.ToString("dd/MM/yyyy") + " " + "Begin tijd: " + StartTime + " " + "Eind Tijd: " + EindTime;
+        }
     }
 }

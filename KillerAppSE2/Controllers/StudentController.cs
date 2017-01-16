@@ -15,7 +15,8 @@ namespace KillerAppSE2.Controllers
     public class StudentController : Controller
     {
         private RegisterViewModelStudent CurrentStudent = new RegisterViewModelStudent();
-        private StudentRepository StudentRepo = new StudentRepository(new MemoryContextStudent());
+        private StudentRepository StudentRepo = new StudentRepository(new SQLContextStudent(new MSSQLConnector()));
+        private List<Beschikbaarheid> beschikbaar { get; set; } = new List<Beschikbaarheid>();
         // GET: Student
         public ActionResult StudentBase()
         {
@@ -36,8 +37,9 @@ namespace KillerAppSE2.Controllers
             string beginTijd = Begin.ToString("t");
             string eindTijd = Eind.ToString("t");
             Date = Date.Date;
+            Models.Beschikbaarheid Beschikbaarheid = new Beschikbaarheid(student, beginTijd, eindTijd, Date);
 
-            if (StudentRepo.RegistreerBeschikbaarheid(student, beginTijd, eindTijd, Date))
+            if (StudentRepo.RegistreerBeschikbaarheid(Beschikbaarheid))
             {
                 return RedirectToAction("StudentBase", "Student");
             }
@@ -45,6 +47,12 @@ namespace KillerAppSE2.Controllers
             {
                 return RedirectToAction("StudentBase", "Student");
             }
+        }
+
+        public ActionResult Planning()
+        {
+            beschikbaar = StudentRepo.Planning((Student) Session["Student"]);
+            return View(beschikbaar);
         }
     }
 }

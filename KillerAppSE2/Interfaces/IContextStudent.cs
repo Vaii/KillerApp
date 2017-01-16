@@ -9,6 +9,8 @@ namespace KillerAppSE2.Interfaces
 {
     public interface IContextStudent
     {
-        bool SetBeschikbaar(Student Student, string Begin, string Eind, DateTime Datum);
+        bool SetBeschikbaar(Beschikbaarheid Beschikbaarheid);
+
+        List<Beschikbaarheid> GetPlanning(Student student);
     }
 }

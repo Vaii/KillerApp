@@ -10,15 +10,15 @@ namespace KillerAppSE2.Repository
     public class StudentRepository
     {
         private IContextStudent _icontextStudent;
-
+        private List<Beschikbaarheid> beschikbaarheden { get; set; }
         public StudentRepository(IContextStudent Context)
         {
             this._icontextStudent = Context;
         }
 
-        public bool RegistreerBeschikbaarheid(Student student, string Begin, string Eind, DateTime Date)
+        public bool RegistreerBeschikbaarheid(Beschikbaarheid Beschikbaarheid)
         {
-            if (_icontextStudent.SetBeschikbaar(student, Begin, Eind, Date))
+            if (_icontextStudent.SetBeschikbaar(Beschikbaarheid))
             {
                 return true;
             }
@@ -26,6 +26,12 @@ namespace KillerAppSE2.Repository
             {
                 return false;
             }
+        }
+
+        public List<Beschikbaarheid> Planning(Student student)
+        {
+            beschikbaarheden = _icontextStudent.GetPlanning(student);
+            return beschikbaarheden;
         }
     }
 }

@@ -13,10 +13,9 @@ namespace KillerAppSE2.Context.Student
     {
         public List<Beschikbaarheid> Beschikbaarheden = new List<Beschikbaarheid>();
 
-        public bool SetBeschikbaar(Models.Student student, string begin, string eind, DateTime datum)
+        public bool SetBeschikbaar(Beschikbaarheid beschikbaar)
         {
             int aantalBeschikbaarHeden = Beschikbaarheden.Count;
-            Beschikbaarheid beschikbaar = new Beschikbaarheid(student, begin, eind, datum);
             Beschikbaarheden.Add(beschikbaar);
             int NieuwAantal = Beschikbaarheden.Count;
             if (NieuwAantal > aantalBeschikbaarHeden)
@@ -27,6 +26,11 @@ namespace KillerAppSE2.Context.Student
             {
                 return false;
             }
-    }
+        }
+
+        public List<Beschikbaarheid> GetPlanning(Models.Student student)
+        {
+            return null;
+        }
     }
 }

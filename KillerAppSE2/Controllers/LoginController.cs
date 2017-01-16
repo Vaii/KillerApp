@@ -38,6 +38,9 @@ namespace KillerAppSE2.Controllers
             }
             else if (ouder != null)
             {
+                CurrentOuder = new RegisterViewModelOuder();
+                CurrentOuder.Ouder = ouder;
+                Session["Ouder"] = CurrentOuder.Ouder;
                 return RedirectToAction("OuderBase", "Ouder");
             }
             else
