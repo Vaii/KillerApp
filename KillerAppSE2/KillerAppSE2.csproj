@@ -152,6 +152,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connector\IConnector.cs" />
     <Compile Include="Connector\MSSQLConnector.cs" />
+    <Compile Include="Context\Ouder\SQLContextOuder.cs" />
     <Compile Include="Context\Student\MemoryContextStudent.cs" />
     <Compile Include="Context\Student\SQLContextStudent.cs" />
     <Compile Include="Context\User\SQLContextUser.cs" />
@@ -163,9 +164,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IContextOuder.cs" />
     <Compile Include="Interfaces\IContextStudent.cs" />
     <Compile Include="Interfaces\IContextUser.cs" />
     <Compile Include="Models\Beschikbaarheid.cs" />
+    <Compile Include="Models\Rit.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Ouder.cs" />
     <Compile Include="Models\Student.cs" />
@@ -175,6 +178,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repository\OuderRepository.cs" />
     <Compile Include="Repository\StudentRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="ViewModel\RegisterViewModelOuder.cs" />
@@ -197,6 +201,7 @@
     <Content Include="Views\Student\Beschikbaarheid.cshtml" />
     <Content Include="Views\Student\Planning.cshtml" />
     <Content Include="Views\Ouder\Aanvraag.cshtml" />
+    <Content Include="Views\Ouder\Planning.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -206,7 +211,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Context\Ouder\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

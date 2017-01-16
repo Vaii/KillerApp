@@ -1,0 +1,13 @@
+﻿@using KillerAppSE2.Models
+@{
+    Layout = "~/Views/Shared/_LayoutLoggedInOuder.cshtml";
+}
+
+@{
+    List<Rit> aangevraagdeRitten = (List<Rit>) Model;
+}
+
+@foreach (Rit rit in aangevraagdeRitten)
+{
+    <p>@rit.ToString()</p>
+}

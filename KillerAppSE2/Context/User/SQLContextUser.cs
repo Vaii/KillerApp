@@ -14,14 +14,14 @@ namespace KillerAppSE2.Context
     {
         private MSSQLConnector _connector;
         private Models.Student Student { get; set; }
-        private Ouder Ouder { get; set; }
+        private Models.Ouder Ouder { get; set; }
 
         public SQLContextUser(MSSQLConnector connector)
         {
             this._connector = connector;
         }
 
-        public bool RegisterUser(Ouder User)
+        public bool RegisterUser(Models.Ouder User)
         {
             SqlCommand cmd = new SqlCommand("RegisterOuder");
             cmd.CommandType = CommandType.StoredProcedure;
@@ -106,7 +106,7 @@ namespace KillerAppSE2.Context
             }
         }
 
-        public Ouder LoginOuder(string email, string wachtwoord)
+        public Models.Ouder LoginOuder(string email, string wachtwoord)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
@@ -124,7 +124,7 @@ namespace KillerAppSE2.Context
                 {
                     foreach (DataRow dr in ouderInfo)
                     {
-                        Ouder oud = new Ouder(Convert.ToString(dr["Initialen"]), Convert.ToString(dr["Achternaam"]), Convert.ToString(dr["Email"]),
+                        Models.Ouder oud = new Models.Ouder(Convert.ToString(dr["Initialen"]), Convert.ToString(dr["Achternaam"]), Convert.ToString(dr["Email"]),
                             Convert.ToString(dr["TelNr"]), Convert.ToString(dr["MobielNr"]), Convert.ToString(dr["ThuisAdres"]), 
                             Convert.ToInt32(dr["Leeftijd"]));
                         Ouder = oud;
