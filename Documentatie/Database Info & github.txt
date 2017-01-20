@@ -14,3 +14,19 @@ https://github.com/Vaii
 Er staan 2 Killer app repos.
 Die met de meeste commits heb ik grotendeels gebruikt. (KillerappSE2)
 De 2e is gemaakt om het overzichtelijk en netes te houden (killerapp)
+
+
+
+HERKANSING NOTE:
+
+Het is me helaas niet gelukt om nog een planning te laten zien van de ritten die ingeplant worden.
+
+---
+
+Het automatisch inplannen van de ritten word gedaan door 2 triggers op de tabellen Beschikbaarheid en Aangevraagde rit.
+Ben wel trots op hoe ze dr uit zijn al zijn ze nog niet helemaal perfect.
+
+Ik wist niet zeker of ik het klasse diagram nog aan moest passen maar dat heb ik wel maar even gedaan.
+
+Ik hoop dat ik in ieder geval genoeg functionaliteit heb geleverd.
+
